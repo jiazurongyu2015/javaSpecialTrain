@@ -1,5 +1,6 @@
 package trainGenericity;
 
+import trainGenericity.Manager.ListsInfo;
 import trainGenericity.Manager.SectInfo;
 
 /**
@@ -14,6 +15,8 @@ public class runSect {
         SectInfo info  =new SectInfo();
         info.getSectInfoA();
         info.getSectInfoB();
-        System.out.print(info.getSectList());
+        ListsInfo listInfo = new ListsInfo();
+        listInfo.Packet(info.getSectList()).add("abc");
+        System.out.println(listInfo.getLists());
     }
 }
